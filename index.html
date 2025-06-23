@@ -1,0 +1,45 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Happy Birthday Game 🎂</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Intro Screen -->
+  <div id="intro-screen">
+    <h1>🎉 Happy Birthday! 🎂</h1>
+    <p>Help Hello Kitty collect all the cakes!</p>
+    <input type="text" id="player-name-input" placeholder="Enter your name" />
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- Clouds -->
+  <div id="clouds-container"></div>
+
+  <!-- Game Container -->
+  <div id="game-container" class="hidden">
+    <div id="counter">Cakes: 0</div>
+    <img id="kitty" src="kitty_stand.png" alt="Hello Kitty" />
+    <div id="cakes-container"></div>
+    <div id="popup" class="hidden">
+      <h2 id="popup-title">🎉🎂 Happy Birthday! 🎂🎉</h2>
+      <p id="popup-text">You helped Hello Kitty eat all the cakes!</p>
+      <button onclick="resetGame()">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="walkSound" src="walk.mp3" preload="auto"></audio>
+  <audio id="eatSound" src="eat.mp3" preload="auto"></audio>
+  <audio id="popupSound" src="popup.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
